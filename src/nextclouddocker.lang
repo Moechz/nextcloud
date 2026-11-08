@@ -1,0 +1,195 @@
+# ===========================================================================
+# Multilingual file for the TOS 7 Docker application "nextclouddocker".
+# File name MUST be: <appid>.lang.  23-language superset (14 required by TOS).
+# The App Center picks the text matching the user's device language;
+# untranslated nodes fall back to English, which the official guide allows.
+# Fields: name (app title), auth (upstream author), descript (up to 512
+# chars), release_note, important (up to 512 chars).
+# Translations come from tosapp.json "translations"; run
+#   tosdocker lang <app>          to re-render this file
+#   tosdocker translate <app>     to see what still needs translating
+# ===========================================================================
+[en-us]
+name         = "Nextcloud"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Nextcloud is a self-hosted productivity platform: files and folders with desktop and mobile sync, sharing links, calendars, contacts, notes and a browser-based office. This package runs the official LinuxServer.io Nextcloud image as a non-root container; the application code, configuration and user files live in the application data folder and survive restarts. Create the administrator account in the browser on first visit; SQLite is the default database, so nothing else has to be installed."
+release_note = "1. First release: Nextcloud 35.0.2 from Docker Hub, running as a non-root container with nginx and PHP-FPM started directly; the code and user data live in the application data folder."
+important    = "Requires DockerEngine. Open the app and create the admin account on first visit; user files are stored in the data folder inside DockerAppData/nextclouddocker. SQLite is the default database and no external database or Redis is included, so this package targets home and small-team use. Back up DockerAppData/nextclouddocker before uninstalling with data removal. The page is plain HTTP on the LAN; put a TLS reverse proxy in front before exposing it to the internet."
+
+[zh-cn]
+name         = "Nextcloud"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Nextcloud 是自托管的协作平台：文件与桌面/手机同步、分享链接、日历、联系人、笔记和网页办公。本应用运行 LinuxServer.io 官方镜像并以非 root 用户运行；程序、配置和用户文件都保存在应用数据目录，重启不丢失。首次访问在浏览器里创建管理员账号即可，默认使用 SQLite，无需另装数据库。"
+release_note = "1. 首个版本：Nextcloud 35.0.2，来自 Docker Hub，以非 root 用户运行；nginx 与 PHP-FPM 由 wrapper 直接启动，程序与用户数据都保存在应用数据目录。"
+important    = "需要 DockerEngine。首次打开请创建管理员账号；用户文件保存在 DockerAppData/nextclouddocker 的 data 目录。默认数据库为 SQLite，本包不含外部数据库或 Redis，适合家庭和小团队。卸载并删除数据前请备份。页面是局域网明文 HTTP，暴露公网前请加 TLS 反向代理。"
+
+[zh-hk]
+name         = "Nextcloud"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Nextcloud 是自託管的協作平台：檔案與桌面/手機同步、分享連結、行事曆、聯絡人、筆記和網頁辦公。本應用執行 LinuxServer.io 官方鏡像並以非 root 使用者執行；程式、設定和使用者檔案都儲存在應用程式資料目錄，重新啟動不遺失。首次存取在瀏覽器裡建立管理員帳號即可，預設使用 SQLite，無需另裝資料庫。"
+release_note = "1. 首個版本：Nextcloud 35.0.2，來自 Docker Hub，以非 root 使用者執行；nginx 與 PHP-FPM 由 wrapper 直接啟動，程式與使用者資料都儲存在應用程式資料目錄。"
+important    = "需要 DockerEngine。首次開啟請建立管理員帳號；使用者檔案儲存在 DockerAppData/nextclouddocker 的 data 目錄。預設資料庫為 SQLite，本包不含外部資料庫或 Redis，適合家庭和小團隊。解除安裝並刪除資料前請備份。頁面是區域網路明文 HTTP，暴露公網前請加 TLS 反向代理。"
+
+[fr-fr]
+name         = "Nextcloud"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Nextcloud is a self-hosted productivity platform: files and folders with desktop and mobile sync, sharing links, calendars, contacts, notes and a browser-based office. This package runs the official LinuxServer.io Nextcloud image as a non-root container; the application code, configuration and user files live in the application data folder and survive restarts. Create the administrator account in the browser on first visit; SQLite is the default database, so nothing else has to be installed."
+release_note = "1. First release: Nextcloud 35.0.2 from Docker Hub, running as a non-root container with nginx and PHP-FPM started directly; the code and user data live in the application data folder."
+important    = "Requires DockerEngine. Open the app and create the admin account on first visit; user files are stored in the data folder inside DockerAppData/nextclouddocker. SQLite is the default database and no external database or Redis is included, so this package targets home and small-team use. Back up DockerAppData/nextclouddocker before uninstalling with data removal. The page is plain HTTP on the LAN; put a TLS reverse proxy in front before exposing it to the internet."
+
+[de-de]
+name         = "Nextcloud"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Nextcloud is a self-hosted productivity platform: files and folders with desktop and mobile sync, sharing links, calendars, contacts, notes and a browser-based office. This package runs the official LinuxServer.io Nextcloud image as a non-root container; the application code, configuration and user files live in the application data folder and survive restarts. Create the administrator account in the browser on first visit; SQLite is the default database, so nothing else has to be installed."
+release_note = "1. First release: Nextcloud 35.0.2 from Docker Hub, running as a non-root container with nginx and PHP-FPM started directly; the code and user data live in the application data folder."
+important    = "Requires DockerEngine. Open the app and create the admin account on first visit; user files are stored in the data folder inside DockerAppData/nextclouddocker. SQLite is the default database and no external database or Redis is included, so this package targets home and small-team use. Back up DockerAppData/nextclouddocker before uninstalling with data removal. The page is plain HTTP on the LAN; put a TLS reverse proxy in front before exposing it to the internet."
+
+[it-it]
+name         = "Nextcloud"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Nextcloud is a self-hosted productivity platform: files and folders with desktop and mobile sync, sharing links, calendars, contacts, notes and a browser-based office. This package runs the official LinuxServer.io Nextcloud image as a non-root container; the application code, configuration and user files live in the application data folder and survive restarts. Create the administrator account in the browser on first visit; SQLite is the default database, so nothing else has to be installed."
+release_note = "1. First release: Nextcloud 35.0.2 from Docker Hub, running as a non-root container with nginx and PHP-FPM started directly; the code and user data live in the application data folder."
+important    = "Requires DockerEngine. Open the app and create the admin account on first visit; user files are stored in the data folder inside DockerAppData/nextclouddocker. SQLite is the default database and no external database or Redis is included, so this package targets home and small-team use. Back up DockerAppData/nextclouddocker before uninstalling with data removal. The page is plain HTTP on the LAN; put a TLS reverse proxy in front before exposing it to the internet."
+
+[es-es]
+name         = "Nextcloud"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Nextcloud is a self-hosted productivity platform: files and folders with desktop and mobile sync, sharing links, calendars, contacts, notes and a browser-based office. This package runs the official LinuxServer.io Nextcloud image as a non-root container; the application code, configuration and user files live in the application data folder and survive restarts. Create the administrator account in the browser on first visit; SQLite is the default database, so nothing else has to be installed."
+release_note = "1. First release: Nextcloud 35.0.2 from Docker Hub, running as a non-root container with nginx and PHP-FPM started directly; the code and user data live in the application data folder."
+important    = "Requires DockerEngine. Open the app and create the admin account on first visit; user files are stored in the data folder inside DockerAppData/nextclouddocker. SQLite is the default database and no external database or Redis is included, so this package targets home and small-team use. Back up DockerAppData/nextclouddocker before uninstalling with data removal. The page is plain HTTP on the LAN; put a TLS reverse proxy in front before exposing it to the internet."
+
+[hu-hu]
+name         = "Nextcloud"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Nextcloud is a self-hosted productivity platform: files and folders with desktop and mobile sync, sharing links, calendars, contacts, notes and a browser-based office. This package runs the official LinuxServer.io Nextcloud image as a non-root container; the application code, configuration and user files live in the application data folder and survive restarts. Create the administrator account in the browser on first visit; SQLite is the default database, so nothing else has to be installed."
+release_note = "1. First release: Nextcloud 35.0.2 from Docker Hub, running as a non-root container with nginx and PHP-FPM started directly; the code and user data live in the application data folder."
+important    = "Requires DockerEngine. Open the app and create the admin account on first visit; user files are stored in the data folder inside DockerAppData/nextclouddocker. SQLite is the default database and no external database or Redis is included, so this package targets home and small-team use. Back up DockerAppData/nextclouddocker before uninstalling with data removal. The page is plain HTTP on the LAN; put a TLS reverse proxy in front before exposing it to the internet."
+
+[ja-jp]
+name         = "Nextcloud"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Nextcloud is a self-hosted productivity platform: files and folders with desktop and mobile sync, sharing links, calendars, contacts, notes and a browser-based office. This package runs the official LinuxServer.io Nextcloud image as a non-root container; the application code, configuration and user files live in the application data folder and survive restarts. Create the administrator account in the browser on first visit; SQLite is the default database, so nothing else has to be installed."
+release_note = "1. First release: Nextcloud 35.0.2 from Docker Hub, running as a non-root container with nginx and PHP-FPM started directly; the code and user data live in the application data folder."
+important    = "Requires DockerEngine. Open the app and create the admin account on first visit; user files are stored in the data folder inside DockerAppData/nextclouddocker. SQLite is the default database and no external database or Redis is included, so this package targets home and small-team use. Back up DockerAppData/nextclouddocker before uninstalling with data removal. The page is plain HTTP on the LAN; put a TLS reverse proxy in front before exposing it to the internet."
+
+[ko-kr]
+name         = "Nextcloud"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Nextcloud is a self-hosted productivity platform: files and folders with desktop and mobile sync, sharing links, calendars, contacts, notes and a browser-based office. This package runs the official LinuxServer.io Nextcloud image as a non-root container; the application code, configuration and user files live in the application data folder and survive restarts. Create the administrator account in the browser on first visit; SQLite is the default database, so nothing else has to be installed."
+release_note = "1. First release: Nextcloud 35.0.2 from Docker Hub, running as a non-root container with nginx and PHP-FPM started directly; the code and user data live in the application data folder."
+important    = "Requires DockerEngine. Open the app and create the admin account on first visit; user files are stored in the data folder inside DockerAppData/nextclouddocker. SQLite is the default database and no external database or Redis is included, so this package targets home and small-team use. Back up DockerAppData/nextclouddocker before uninstalling with data removal. The page is plain HTTP on the LAN; put a TLS reverse proxy in front before exposing it to the internet."
+
+[pl-pl]
+name         = "Nextcloud"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Nextcloud is a self-hosted productivity platform: files and folders with desktop and mobile sync, sharing links, calendars, contacts, notes and a browser-based office. This package runs the official LinuxServer.io Nextcloud image as a non-root container; the application code, configuration and user files live in the application data folder and survive restarts. Create the administrator account in the browser on first visit; SQLite is the default database, so nothing else has to be installed."
+release_note = "1. First release: Nextcloud 35.0.2 from Docker Hub, running as a non-root container with nginx and PHP-FPM started directly; the code and user data live in the application data folder."
+important    = "Requires DockerEngine. Open the app and create the admin account on first visit; user files are stored in the data folder inside DockerAppData/nextclouddocker. SQLite is the default database and no external database or Redis is included, so this package targets home and small-team use. Back up DockerAppData/nextclouddocker before uninstalling with data removal. The page is plain HTTP on the LAN; put a TLS reverse proxy in front before exposing it to the internet."
+
+[ru-ru]
+name         = "Nextcloud"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Nextcloud is a self-hosted productivity platform: files and folders with desktop and mobile sync, sharing links, calendars, contacts, notes and a browser-based office. This package runs the official LinuxServer.io Nextcloud image as a non-root container; the application code, configuration and user files live in the application data folder and survive restarts. Create the administrator account in the browser on first visit; SQLite is the default database, so nothing else has to be installed."
+release_note = "1. First release: Nextcloud 35.0.2 from Docker Hub, running as a non-root container with nginx and PHP-FPM started directly; the code and user data live in the application data folder."
+important    = "Requires DockerEngine. Open the app and create the admin account on first visit; user files are stored in the data folder inside DockerAppData/nextclouddocker. SQLite is the default database and no external database or Redis is included, so this package targets home and small-team use. Back up DockerAppData/nextclouddocker before uninstalling with data removal. The page is plain HTTP on the LAN; put a TLS reverse proxy in front before exposing it to the internet."
+
+[tr-tr]
+name         = "Nextcloud"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Nextcloud is a self-hosted productivity platform: files and folders with desktop and mobile sync, sharing links, calendars, contacts, notes and a browser-based office. This package runs the official LinuxServer.io Nextcloud image as a non-root container; the application code, configuration and user files live in the application data folder and survive restarts. Create the administrator account in the browser on first visit; SQLite is the default database, so nothing else has to be installed."
+release_note = "1. First release: Nextcloud 35.0.2 from Docker Hub, running as a non-root container with nginx and PHP-FPM started directly; the code and user data live in the application data folder."
+important    = "Requires DockerEngine. Open the app and create the admin account on first visit; user files are stored in the data folder inside DockerAppData/nextclouddocker. SQLite is the default database and no external database or Redis is included, so this package targets home and small-team use. Back up DockerAppData/nextclouddocker before uninstalling with data removal. The page is plain HTTP on the LAN; put a TLS reverse proxy in front before exposing it to the internet."
+
+[pt-pt]
+name         = "Nextcloud"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Nextcloud is a self-hosted productivity platform: files and folders with desktop and mobile sync, sharing links, calendars, contacts, notes and a browser-based office. This package runs the official LinuxServer.io Nextcloud image as a non-root container; the application code, configuration and user files live in the application data folder and survive restarts. Create the administrator account in the browser on first visit; SQLite is the default database, so nothing else has to be installed."
+release_note = "1. First release: Nextcloud 35.0.2 from Docker Hub, running as a non-root container with nginx and PHP-FPM started directly; the code and user data live in the application data folder."
+important    = "Requires DockerEngine. Open the app and create the admin account on first visit; user files are stored in the data folder inside DockerAppData/nextclouddocker. SQLite is the default database and no external database or Redis is included, so this package targets home and small-team use. Back up DockerAppData/nextclouddocker before uninstalling with data removal. The page is plain HTTP on the LAN; put a TLS reverse proxy in front before exposing it to the internet."
+
+[ar-sa]
+name         = "Nextcloud"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Nextcloud is a self-hosted productivity platform: files and folders with desktop and mobile sync, sharing links, calendars, contacts, notes and a browser-based office. This package runs the official LinuxServer.io Nextcloud image as a non-root container; the application code, configuration and user files live in the application data folder and survive restarts. Create the administrator account in the browser on first visit; SQLite is the default database, so nothing else has to be installed."
+release_note = "1. First release: Nextcloud 35.0.2 from Docker Hub, running as a non-root container with nginx and PHP-FPM started directly; the code and user data live in the application data folder."
+important    = "Requires DockerEngine. Open the app and create the admin account on first visit; user files are stored in the data folder inside DockerAppData/nextclouddocker. SQLite is the default database and no external database or Redis is included, so this package targets home and small-team use. Back up DockerAppData/nextclouddocker before uninstalling with data removal. The page is plain HTTP on the LAN; put a TLS reverse proxy in front before exposing it to the internet."
+
+[cs-cz]
+name         = "Nextcloud"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Nextcloud is a self-hosted productivity platform: files and folders with desktop and mobile sync, sharing links, calendars, contacts, notes and a browser-based office. This package runs the official LinuxServer.io Nextcloud image as a non-root container; the application code, configuration and user files live in the application data folder and survive restarts. Create the administrator account in the browser on first visit; SQLite is the default database, so nothing else has to be installed."
+release_note = "1. First release: Nextcloud 35.0.2 from Docker Hub, running as a non-root container with nginx and PHP-FPM started directly; the code and user data live in the application data folder."
+important    = "Requires DockerEngine. Open the app and create the admin account on first visit; user files are stored in the data folder inside DockerAppData/nextclouddocker. SQLite is the default database and no external database or Redis is included, so this package targets home and small-team use. Back up DockerAppData/nextclouddocker before uninstalling with data removal. The page is plain HTTP on the LAN; put a TLS reverse proxy in front before exposing it to the internet."
+
+[he-il]
+name         = "Nextcloud"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Nextcloud is a self-hosted productivity platform: files and folders with desktop and mobile sync, sharing links, calendars, contacts, notes and a browser-based office. This package runs the official LinuxServer.io Nextcloud image as a non-root container; the application code, configuration and user files live in the application data folder and survive restarts. Create the administrator account in the browser on first visit; SQLite is the default database, so nothing else has to be installed."
+release_note = "1. First release: Nextcloud 35.0.2 from Docker Hub, running as a non-root container with nginx and PHP-FPM started directly; the code and user data live in the application data folder."
+important    = "Requires DockerEngine. Open the app and create the admin account on first visit; user files are stored in the data folder inside DockerAppData/nextclouddocker. SQLite is the default database and no external database or Redis is included, so this package targets home and small-team use. Back up DockerAppData/nextclouddocker before uninstalling with data removal. The page is plain HTTP on the LAN; put a TLS reverse proxy in front before exposing it to the internet."
+
+[id-id]
+name         = "Nextcloud"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Nextcloud is a self-hosted productivity platform: files and folders with desktop and mobile sync, sharing links, calendars, contacts, notes and a browser-based office. This package runs the official LinuxServer.io Nextcloud image as a non-root container; the application code, configuration and user files live in the application data folder and survive restarts. Create the administrator account in the browser on first visit; SQLite is the default database, so nothing else has to be installed."
+release_note = "1. First release: Nextcloud 35.0.2 from Docker Hub, running as a non-root container with nginx and PHP-FPM started directly; the code and user data live in the application data folder."
+important    = "Requires DockerEngine. Open the app and create the admin account on first visit; user files are stored in the data folder inside DockerAppData/nextclouddocker. SQLite is the default database and no external database or Redis is included, so this package targets home and small-team use. Back up DockerAppData/nextclouddocker before uninstalling with data removal. The page is plain HTTP on the LAN; put a TLS reverse proxy in front before exposing it to the internet."
+
+[nb-no]
+name         = "Nextcloud"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Nextcloud is a self-hosted productivity platform: files and folders with desktop and mobile sync, sharing links, calendars, contacts, notes and a browser-based office. This package runs the official LinuxServer.io Nextcloud image as a non-root container; the application code, configuration and user files live in the application data folder and survive restarts. Create the administrator account in the browser on first visit; SQLite is the default database, so nothing else has to be installed."
+release_note = "1. First release: Nextcloud 35.0.2 from Docker Hub, running as a non-root container with nginx and PHP-FPM started directly; the code and user data live in the application data folder."
+important    = "Requires DockerEngine. Open the app and create the admin account on first visit; user files are stored in the data folder inside DockerAppData/nextclouddocker. SQLite is the default database and no external database or Redis is included, so this package targets home and small-team use. Back up DockerAppData/nextclouddocker before uninstalling with data removal. The page is plain HTTP on the LAN; put a TLS reverse proxy in front before exposing it to the internet."
+
+[nl-nl]
+name         = "Nextcloud"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Nextcloud is a self-hosted productivity platform: files and folders with desktop and mobile sync, sharing links, calendars, contacts, notes and a browser-based office. This package runs the official LinuxServer.io Nextcloud image as a non-root container; the application code, configuration and user files live in the application data folder and survive restarts. Create the administrator account in the browser on first visit; SQLite is the default database, so nothing else has to be installed."
+release_note = "1. First release: Nextcloud 35.0.2 from Docker Hub, running as a non-root container with nginx and PHP-FPM started directly; the code and user data live in the application data folder."
+important    = "Requires DockerEngine. Open the app and create the admin account on first visit; user files are stored in the data folder inside DockerAppData/nextclouddocker. SQLite is the default database and no external database or Redis is included, so this package targets home and small-team use. Back up DockerAppData/nextclouddocker before uninstalling with data removal. The page is plain HTTP on the LAN; put a TLS reverse proxy in front before exposing it to the internet."
+
+[sv-se]
+name         = "Nextcloud"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Nextcloud is a self-hosted productivity platform: files and folders with desktop and mobile sync, sharing links, calendars, contacts, notes and a browser-based office. This package runs the official LinuxServer.io Nextcloud image as a non-root container; the application code, configuration and user files live in the application data folder and survive restarts. Create the administrator account in the browser on first visit; SQLite is the default database, so nothing else has to be installed."
+release_note = "1. First release: Nextcloud 35.0.2 from Docker Hub, running as a non-root container with nginx and PHP-FPM started directly; the code and user data live in the application data folder."
+important    = "Requires DockerEngine. Open the app and create the admin account on first visit; user files are stored in the data folder inside DockerAppData/nextclouddocker. SQLite is the default database and no external database or Redis is included, so this package targets home and small-team use. Back up DockerAppData/nextclouddocker before uninstalling with data removal. The page is plain HTTP on the LAN; put a TLS reverse proxy in front before exposing it to the internet."
+
+[th-th]
+name         = "Nextcloud"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Nextcloud is a self-hosted productivity platform: files and folders with desktop and mobile sync, sharing links, calendars, contacts, notes and a browser-based office. This package runs the official LinuxServer.io Nextcloud image as a non-root container; the application code, configuration and user files live in the application data folder and survive restarts. Create the administrator account in the browser on first visit; SQLite is the default database, so nothing else has to be installed."
+release_note = "1. First release: Nextcloud 35.0.2 from Docker Hub, running as a non-root container with nginx and PHP-FPM started directly; the code and user data live in the application data folder."
+important    = "Requires DockerEngine. Open the app and create the admin account on first visit; user files are stored in the data folder inside DockerAppData/nextclouddocker. SQLite is the default database and no external database or Redis is included, so this package targets home and small-team use. Back up DockerAppData/nextclouddocker before uninstalling with data removal. The page is plain HTTP on the LAN; put a TLS reverse proxy in front before exposing it to the internet."
+
+[vi-vn]
+name         = "Nextcloud"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Nextcloud is a self-hosted productivity platform: files and folders with desktop and mobile sync, sharing links, calendars, contacts, notes and a browser-based office. This package runs the official LinuxServer.io Nextcloud image as a non-root container; the application code, configuration and user files live in the application data folder and survive restarts. Create the administrator account in the browser on first visit; SQLite is the default database, so nothing else has to be installed."
+release_note = "1. First release: Nextcloud 35.0.2 from Docker Hub, running as a non-root container with nginx and PHP-FPM started directly; the code and user data live in the application data folder."
+important    = "Requires DockerEngine. Open the app and create the admin account on first visit; user files are stored in the data folder inside DockerAppData/nextclouddocker. SQLite is the default database and no external database or Redis is included, so this package targets home and small-team use. Back up DockerAppData/nextclouddocker before uninstalling with data removal. The page is plain HTTP on the LAN; put a TLS reverse proxy in front before exposing it to the internet."
+

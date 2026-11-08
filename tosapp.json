@@ -1,0 +1,98 @@
+{
+  "app_id": "nextclouddocker",
+  "title": "Nextcloud",
+  "image": "linuxserver/nextcloud:35.0.2-ls461",
+  "repo_name": "nextcloud",
+  "github_repo": "nextcloud",
+  "upstream_version": "35.0.2",
+  "version": "35.0.2-1",
+  "mode": "wrapper",
+  "icon_slug": "nextcloud",
+  "container_port": 8080,
+  "host_port": 8014,
+  "category": [
+    "Web_Services"
+  ],
+  "user": "1000:1000",
+  "volumes": [
+    {
+      "host": "/Volume1/DockerAppData/nextclouddocker/config",
+      "container": "/config"
+    },
+    {
+      "host": "/Volume1/DockerAppData/nextclouddocker/data",
+      "container": "/data"
+    }
+  ],
+  "env": {
+    "TZ": "Asia/Shanghai",
+    "HOME": "/config"
+  },
+  "healthcheck": [
+    "CMD-SHELL",
+    "curl -s -o /dev/null -f http://127.0.0.1:8080/status.php || exit 1"
+  ],
+  "healthcheck_interval": "30s",
+  "healthcheck_timeout": "10s",
+  "healthcheck_retries": 3,
+  "healthcheck_start_period": "120s",
+  "auth": "linuxserver.io",
+  "upstream_url": "https://github.com/linuxserver/docker-nextcloud",
+  "upstream_license": "GPL-3.0-only",
+  "license": "GPL-3.0-only",
+  "official": "https://github.com/linuxserver/docker-nextcloud",
+  "help": "https://github.com/Moechz/nextcloud/issues",
+  "descript": "Nextcloud is a self-hosted productivity platform: files and folders with desktop and mobile sync, sharing links, calendars, contacts, notes and a browser-based office. This package runs the official LinuxServer.io Nextcloud image as a non-root container; the application code, configuration and user files live in the application data folder and survive restarts. Create the administrator account in the browser on first visit; SQLite is the default database, so nothing else has to be installed.",
+  "important": "Requires DockerEngine. Open the app and create the admin account on first visit; user files are stored in the data folder inside DockerAppData/nextclouddocker. SQLite is the default database and no external database or Redis is included, so this package targets home and small-team use. Back up DockerAppData/nextclouddocker before uninstalling with data removal. The page is plain HTTP on the LAN; put a TLS reverse proxy in front before exposing it to the internet.",
+  "release_note": "1. First release: Nextcloud 35.0.2 from Docker Hub, running as a non-root container with nginx and PHP-FPM started directly; the code and user data live in the application data folder.",
+  "translations": {
+    "zh-cn": {
+      "descript": "Nextcloud 是自托管的协作平台：文件与桌面/手机同步、分享链接、日历、联系人、笔记和网页办公。本应用运行 LinuxServer.io 官方镜像并以非 root 用户运行；程序、配置和用户文件都保存在应用数据目录，重启不丢失。首次访问在浏览器里创建管理员账号即可，默认使用 SQLite，无需另装数据库。",
+      "important": "需要 DockerEngine。首次打开请创建管理员账号；用户文件保存在 DockerAppData/nextclouddocker 的 data 目录。默认数据库为 SQLite，本包不含外部数据库或 Redis，适合家庭和小团队。卸载并删除数据前请备份。页面是局域网明文 HTTP，暴露公网前请加 TLS 反向代理。",
+      "release_note": "1. 首个版本：Nextcloud 35.0.2，来自 Docker Hub，以非 root 用户运行；nginx 与 PHP-FPM 由 wrapper 直接启动，程序与用户数据都保存在应用数据目录。"
+    },
+    "zh-hk": {
+      "descript": "Nextcloud 是自託管的協作平台：檔案與桌面/手機同步、分享連結、行事曆、聯絡人、筆記和網頁辦公。本應用執行 LinuxServer.io 官方鏡像並以非 root 使用者執行；程式、設定和使用者檔案都儲存在應用程式資料目錄，重新啟動不遺失。首次存取在瀏覽器裡建立管理員帳號即可，預設使用 SQLite，無需另裝資料庫。",
+      "important": "需要 DockerEngine。首次開啟請建立管理員帳號；使用者檔案儲存在 DockerAppData/nextclouddocker 的 data 目錄。預設資料庫為 SQLite，本包不含外部資料庫或 Redis，適合家庭和小團隊。解除安裝並刪除資料前請備份。頁面是區域網路明文 HTTP，暴露公網前請加 TLS 反向代理。",
+      "release_note": "1. 首個版本：Nextcloud 35.0.2，來自 Docker Hub，以非 root 使用者執行；nginx 與 PHP-FPM 由 wrapper 直接啟動，程式與使用者資料都儲存在應用程式資料目錄。"
+    }
+  },
+  "data_notes": "`config` holds the Nextcloud code, configuration and app-store data; `data` holds the user files and the SQLite database. Copying both folders is a complete backup.",
+  "design_notes": [
+    "**Non-root, no s6.** The upstream image starts s6-overlay as root and drops to its internal user; this entrypoint bypasses s6 and starts nginx and PHP-FPM directly as uid 1000, with PID, temporary and log paths below `/config` and `/tmp`.",
+    "**Code and data in the volumes.** The application code is seeded from `/app/www/src` into `/config/www/nextcloud` on first start (and refreshed when the image version changes); the user data directory is `/data`, so nothing writable lives in the image.",
+    "**SQLite by default.** The container needs no external database; the first-run page creates the admin account and the database in `/data`.",
+    "**Health check** probes `/status.php`, which answers even before the first-run wizard is completed.",
+    "**Fixed image tag, never `:latest`**, Docker Hub only, no `privileged`, no `network_mode: host`, no Docker socket, no `cap_add`."
+  ],
+  "limitations": [
+    "SQLite is the only database in this package; there is no external database, Redis, or object storage integration. It is intended for home and small-team use.",
+    "The user data directory is `/data`; files are stored in the application data folder, not in a TOS shared folder.",
+    "The page is plain HTTP on the LAN and has no TLS. Put a TLS reverse proxy in front before exposing it to the internet.",
+    "The first start copies the Nextcloud code (about 830 MB) into the data volume, which takes a few seconds on a local disk and uses that space.",
+    "Docker applications cannot be upgraded in place in the App Center: updating means uninstalling and reinstalling, which keeps the data folders."
+  ],
+  "runtime_files": [
+    {
+      "path": "config/www/nextcloud/version.php",
+      "purpose": "Nextcloud code version marker (the code is seeded here on first start)",
+      "created": "first start",
+      "growth": "static",
+      "lifecycle": "refreshed when the image version changes"
+    },
+    {
+      "path": "config/www/nextcloud/config/config.php",
+      "purpose": "Nextcloud configuration and installed-app state",
+      "created": "first start",
+      "growth": "grows with settings and apps",
+      "lifecycle": "never overwritten; back it up"
+    }
+  ],
+  "entrypoint_file": "src/entrypoint.sh",
+  "platform": "x86_64",
+  "publisher": "Moechz",
+  "compose_project": "nextclouddocker",
+  "release_tag_prefix": "v",
+  "docker_socket": false,
+  "group_add": []
+}
